@@ -1,94 +1,92 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { ArrowRight, Code, Database, Layout } from "lucide-react";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-24 px-4 relative">
-      {" "}
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          About <span className="text-primary"> Me</span>
-        </h2>
+    <section id="about" className="py-32 px-4 relative overflow-hidden bg-secondary/5">
+      {/* Decorative Background */}
+      <div className="absolute top-0 right-1/4 w-[40vw] h-[40vw] bg-blue-500/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Enthusiast
-            </h3>
-
-            <p className="text-muted-foreground">
-              Hello! I'm Ambuj, a web developer with a passion for crafting
-              beautiful and functional digital experiences. With a strong
-              foundation in modern web technologies, I specialize in building
-              responsive websites and applications that not only look great but
-              also provide seamless user experiences.
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="flex flex-col lg:flex-row gap-16 items-start">
+          
+          {/* Left: Large Sticky Header */}
+          <div className="w-full lg:w-1/3 lg:sticky lg:top-32 space-y-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground tracking-tight leading-[1.1]">
+              Engineering <br />
+              <span className="text-primary">Impact.</span>
+            </h2>
+            <div className="w-20 h-1 bg-primary/50 rounded-full"></div>
+            <p className="text-lg text-muted-foreground font-light leading-relaxed">
+              I build scalable enterprise applications that solve real business problems with elegant code.
             </p>
-
-            <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web 
-              and overall software landscape.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button">
-                {" "}
-                Get In Touch
-              </a>
-
+            <div className="pt-4 hidden lg:block">
               <a
                 href="https://drive.google.com/file/d/11VTSTujtRV8tLFawvhr7tI8C4MjfdMl1/view?usp=drive_link"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-primary font-medium hover:text-blue-400 transition-colors group"
               >
-                Download CV
+                View Full Resume <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-6">
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
-                  <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
-                  </p>
-                </div>
-              </div>
+          {/* Right: Content Stream */}
+          <div className="w-full lg:w-2/3 space-y-12">
+            
+            <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground font-light leading-relaxed">
+              <p className="text-xl text-foreground font-medium mb-6">
+                Hello! I'm Ambuj, a Software Engineer with experience in building robust full-stack solutions.
+              </p>
+              <p>
+                My journey in tech involves crafting high-performance backend microservices and matching them with dynamic, responsive front-end interfaces. I specialize in the modern web ecosystem, utilizing technologies like React, Node.js, and .NET to deliver end-to-end products.
+              </p>
+              <p>
+                With hands-on experience deploying scalable architecture on the cloud (Azure) and implementing robust CI/CD pipelines, I thrive in Agile environments where problem-solving and clean code intersect to create seamless user experiences.
+              </p>
             </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
-                  <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                </div>
 
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Software Developer</h4>
-                  <p className="text-muted-foreground">
-                    Building robust software solutions with a focus on
-                    performance and scalability.
-                  </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
+              {/* Feature Box 1 */}
+              <div className="glass p-8 rounded-3xl border border-white/5 shadow-lg group hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700">
+                  <Layout size={80} className="text-primary" />
                 </div>
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 border border-primary/20 relative z-10">
+                  <Layout size={24} className="text-primary" />
+                </div>
+                <h4 className="text-xl font-bold text-foreground mb-3 relative z-10">Frontend Systems</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed relative z-10">
+                  Building reactive, accessible, and highly interactive user interfaces using modern JavaScript frameworks.
+                </p>
+              </div>
+
+              {/* Feature Box 2 */}
+              <div className="glass p-8 rounded-3xl border border-white/5 shadow-lg group hover:-translate-y-2 transition-transform duration-500 mt-0 md:mt-12 relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700">
+                  <Database size={80} className="text-blue-500" />
+                </div>
+                <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 border border-blue-500/20 relative z-10">
+                  <Database size={24} className="text-blue-500" />
+                </div>
+                <h4 className="text-xl font-bold text-foreground mb-3 relative z-10">Backend Architecture</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed relative z-10">
+                  Designing scalable database schemas, robust RESTful APIs, and secure microservices for the cloud.
+                </p>
               </div>
             </div>
+
+            <div className="pt-6 lg:hidden">
+              <a
+                href="https://drive.google.com/file/d/11VTSTujtRV8tLFawvhr7tI8C4MjfdMl1/view?usp=drive_link"
+                target="_blank"
+                rel="noreferrer"
+                className="cosmic-button w-full"
+              >
+                Download CV
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
