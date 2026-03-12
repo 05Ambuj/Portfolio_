@@ -4,7 +4,8 @@ const projects = [
   {
     id: 1,
     title: "ProjecTron",
-    description: "Enterprise project management platform with robust RBAC, JWT auth, and async notification services for multi-tenant organizations.",
+    description:
+      "Enterprise project management platform with robust RBAC, JWT auth, and async notification services for multi-tenant organizations.",
     image: "/projects/projectron.png",
     tags: ["React", "TypeScript", "ASP.NET Core", "Azure", "Docker"],
     demoUrl: "https://pip-pas-frontend-am.azurewebsites.net/",
@@ -13,17 +14,20 @@ const projects = [
   {
     id: 2,
     title: "CineBook",
-    description: "Full-stack movie ticket booking system featuring real-time seat validation, secure payment processing, and event-driven email confirmations.",
+    description:
+      "Full-stack movie ticket booking system featuring real-time seat validation, secure payment processing, and event-driven email confirmations.",
     image: "/projects/mtbs.png",
     tags: ["React", "ASP.NET Core", "SQL Server", "EF Core", "Azure"],
-    demoUrl: "https://aip-training-modsol-as-mtbs-frontend-am.azurewebsites.net/",
+    demoUrl:
+      "https://aip-training-modsol-as-mtbs-frontend-am.azurewebsites.net/",
     githubUrl: "https://github.com/05Ambuj/MTBS",
   },
   {
     id: 3,
     title: "Wiggle",
-    description: "A dynamic social media platform boasting real-time updates, integrated chats, and a highly interactive user interface.",
-    image: "/projects/image.png",
+    description:
+      "A dynamic social media platform boasting real-time updates, integrated chats, and a highly interactive user interface.",
+    image: "/projects/wiggle.png",
     tags: ["React", "MongoDB", "Node.js", "Socket.io", "TailwindCSS"],
     demoUrl: "https://wiggle-v5ys.onrender.com/",
     githubUrl: "https://github.com/05Ambuj/wiggle",
@@ -31,7 +35,8 @@ const projects = [
   {
     id: 4,
     title: "Campistan",
-    description: "A beautiful campsite discovery application engineered with a strong focus on user experience and seamless performance.",
+    description:
+      "A beautiful campsite discovery application engineered with a strong focus on user experience and seamless performance.",
     image: "/projects/p11.png",
     tags: ["React", "Node.js", "Express", "MongoDB", "Bootstrap"],
     demoUrl: "https://campistan.vercel.app/",
@@ -40,7 +45,8 @@ const projects = [
   {
     id: 5,
     title: "Escapo",
-    description: "A highly responsive frontend clone of X (Twitter) implementing sophisticated real-time features and polished aesthetics.",
+    description:
+      "A highly responsive frontend clone of X (Twitter) implementing sophisticated real-time features and polished aesthetics.",
     image: "/projects/p21.png",
     tags: ["React", "TailwindCSS", "ImageKit"],
     demoUrl: "https://esc-2.vercel.app/",
@@ -50,7 +56,10 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-32 px-4 relative bg-background overflow-hidden">
+    <section
+      id="projects"
+      className="py-32 px-4 relative bg-background overflow-hidden"
+    >
       {/* Background decoration */}
       <div className="absolute top-1/4 left-[-20%] w-[70vw] h-[70vw] bg-blue-500/5 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
 
@@ -61,7 +70,8 @@ export const ProjectsSection = () => {
               Selected <span className="text-primary">Works.</span>
             </h2>
             <p className="text-xl text-muted-foreground font-light leading-relaxed">
-              Showcasing a collection of engineered solutions where design meets performance.
+              Showcasing a collection of engineered solutions where design meets
+              performance.
             </p>
           </div>
         </div>
@@ -70,7 +80,7 @@ export const ProjectsSection = () => {
           {projects.map((project, idx) => (
             <div
               key={project.id}
-              className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-20 items-center group`}
+              className={`flex flex-col ${idx % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} gap-12 lg:gap-20 items-center group`}
             >
               {/* Image Section */}
               <div className="w-full lg:w-[60%] relative">
@@ -88,7 +98,9 @@ export const ProjectsSection = () => {
               {/* Content Section */}
               <div className="w-full lg:w-[40%] flex flex-col justify-center space-y-8">
                 <div>
-                  <div className="text-primary font-mono text-sm tracking-widest mb-4 opacity-80">0{idx + 1}</div>
+                  <div className="text-primary font-mono text-sm tracking-widest mb-4 opacity-80">
+                    0{idx + 1}
+                  </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6 group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </h3>
@@ -101,7 +113,10 @@ export const ProjectsSection = () => {
 
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, i) => (
-                    <span key={i} className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-secondary/30 rounded-lg border border-border">
+                    <span
+                      key={i}
+                      className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-secondary/30 rounded-lg border border-border"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -114,7 +129,11 @@ export const ProjectsSection = () => {
                     rel="noreferrer"
                     className="flex items-center gap-2 text-foreground font-medium hover:text-primary transition-colors group/link"
                   >
-                    <Github size={22} className="group-hover/link:-translate-y-0.5 transition-transform" /> Code
+                    <Github
+                      size={22}
+                      className="group-hover/link:-translate-y-0.5 transition-transform"
+                    />{" "}
+                    Code
                   </a>
                   <a
                     href={project.demoUrl}
@@ -122,7 +141,11 @@ export const ProjectsSection = () => {
                     rel="noreferrer"
                     className="flex items-center gap-2 text-foreground font-medium hover:text-primary transition-colors group/link"
                   >
-                    <ExternalLink size={22} className="group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform" /> Live Demo
+                    <ExternalLink
+                      size={22}
+                      className="group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 transition-transform"
+                    />{" "}
+                    Live Demo
                   </a>
                 </div>
               </div>
